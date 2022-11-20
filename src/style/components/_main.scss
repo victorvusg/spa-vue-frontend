@@ -1,0 +1,15 @@
+.main{
+    width: 100%;
+    height: 100%;
+    // padding-top: 36px;
+}
+.box-no-data{
+    border: 1px dashed #000;
+    border-radius: 12px;
+    background-color: $background-color2;
+    padding: 24px 12px;
+    text-align: center;
+}
+.padding-from-top {
+    padding-top: 36px!important;
+}

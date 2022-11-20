@@ -1,0 +1,23 @@
+.my-customer-container {
+    height: 100%;
+    width: 100%;
+    .left-view {
+        background-color: red;
+    }
+    .right-view {
+        background-color: blue;
+    }
+    .view {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.left-view{}
+
+.right-view{
+    width: 100%;
+    height: 100%;
+}

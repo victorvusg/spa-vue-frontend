@@ -1,0 +1,80 @@
+// $primary-color: #7BA47F;
+$primary-color:#2f573d;
+// $primary-color: #295F49;
+$secondary-color: #ffbe8a;
+$third-color: #835a38;
+$accent-color:#F1EFE6;
+$error-color: #EF7D6C;
+$warning-color: #E9A67A;
+$btn-text-green: #60c85a;
+$text-color: #BEC2CC;
+$text-color2: #7E8799;
+$label: #0000;
+$background-color2: #FDF6F0;
+$background-logo: #71896e;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+html, body{
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+$body-font-family: 'Nunito', sans-serif;
+.slide-left-enter-active {
+    transition: all .3s ease;
+}
+.slide-left-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-left-enter
+    /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(100%);
+    opacity: 0;
+}
+.slide-left-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-right-enter-active {
+    transition: all .3s ease;
+}
+.slide-right-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-right-enter
+    /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.slide-right-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
+}
+.noscroll {
+    overflow: hidden;
+}
+.background--primary {
+    // background-color: $primary-color!important;
+    background-image: linear-gradient(#2f573d, #223f2c);
+}
+.h-100 {
+    height: 100%!important;
+}
+.w-100 {
+    width: 100%!important;
+}
+.mx-auto {
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+.theme--dark.v-sheet {
+    color: #FFFAEC!important;
+}
+.message-layout {
+    background-color: rgb(229,229,234);
+    border-radius: 10px;
+    padding: 0.8em 1em!important;
+}
+.notification-layout {
+    background-color: #e5e5eac9 !important;
+    border-radius: 10px;
+  }

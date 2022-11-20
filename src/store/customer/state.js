@@ -1,0 +1,4 @@
+export default {
+  customerSearchList: [],
+  customer: {},
+};

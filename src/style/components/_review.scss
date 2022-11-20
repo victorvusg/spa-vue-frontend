@@ -1,0 +1,191 @@
+.review-wrapper {
+
+
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: hidden;
+    background-color: #00000017;
+    padding-top: 56px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 56px;
+
+    .v-toolbar__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $primary-color;
+    }
+}
+
+.search-intake {
+    .v-text-field__details {
+        display: none !important;
+    }
+
+    .v-input__control {
+        width: 50%;
+    }
+
+    .v-input__slot {
+        margin-bottom: 0 !important;
+    }
+}
+
+.my-box-custom-card {
+
+    margin-top: 24px;
+    padding: 24px;
+    width: 90%;
+    max-height: 100%;
+    max-width: 900px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: white;
+
+    @include media-breakpoint-up(sm) {
+        padding: 32px;
+        margin-top: 32px;
+    }
+
+
+}
+
+.pre-question {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: large !important;
+
+}
+
+.v-input--selection-controls {
+    margin-top: 0 !important;
+
+    label {
+        @media (min-width: 768px) {
+            font-size: 18px;
+        }
+    }
+
+    .v-input__slot {
+        margin-bottom: 0 !important;
+    }
+}
+
+.v-input--is-label-active {
+    .select-option {
+        color: $primary-color !important;
+        font-weight: 400;
+
+    }
+}
+
+.select-option {
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.my-custom-size-rating {
+    .v-icon.v-icon--link {
+        font-size: 30px !important;
+        padding: 3px;
+        margin: 0 3px;
+        outline: none;
+    }
+}
+
+.my-service-checkbox-has-children {
+    margin-left: 20px;
+
+    @include media-breakpoint-up(sm) {
+        margin-left: 40px;
+    }
+}
+
+.review-subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.review-question {
+    font-size: large;
+}
+
+.review-form-icon {
+    font-size: 200px;
+    border: solid 2px;
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding-top: 8px;
+}
+
+@font-face {
+    font-family: thankYou;
+    src: url("../assets/fonts/DancingScript-VariableFont_wght.ttf");
+}
+
+.thank-you {
+    font-family: thankYou;
+    text-align: center;
+    font-size: 50px;
+    color: #ff99ab;
+    font-weight: 900;
+}
+
+.thank-description {
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.heart-split {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+    hr {
+        border-color: #ff99ab8c !important;
+    }
+
+    .heart-icon {
+        background-color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.rating-w-label {
+    display: flex;
+
+    .rating-obj {
+        display: flex;
+        flex-basis: 20%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.error-message-hidden {
+    .v-input--is-label-active {
+        label {
+            color: $primary-color;
+            font-weight: 500;
+        }
+    }
+
+    .v-input__control {
+        .v-messages {
+            display: none !important;
+        }
+    }
+}

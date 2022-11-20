@@ -1,0 +1,67 @@
+.create-new-customer-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .avatar-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .centered-input {
+            input {
+                text-align: center;
+                font-size: 25px;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+
+            .v-input__slot {
+                &:before {
+                    display: none;
+                }
+            }
+
+            label {
+                top: 50% !important;
+                left: 50% !important;
+                margin-right: -50% !important;
+                transform: translate(-50%, -50%) !important;
+            }
+        }
+
+        .v-icon.v-icon.avatar {
+            font-size: 100px !important;
+            border-radius: 100px;
+            padding: 8px;
+            border: 4px solid $primary-color;
+            color: $primary-color;
+        }
+    }
+
+    .phone-number {
+        input {
+            padding: 8px 0px 8px 8px !important;
+            text-align: right;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .v-text-field__prefix {
+            padding-right: 20px !important;
+            font-weight: 500;
+        }
+
+        .v-text-field__slot {
+            margin-bottom: 5px;
+        }
+
+        .v-text-field__details {
+            display: none !important;
+        }
+    }
+
+}

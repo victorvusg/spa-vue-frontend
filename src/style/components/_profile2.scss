@@ -1,0 +1,165 @@
+.user-profile {
+  .user-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .v-icon.avatar {
+      font-size: 100px !important;
+      border-radius: 100px;
+      padding: 8px;
+      border: 4px solid $primary-color;
+      color: $primary-color;
+    }
+
+    .name {
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .phone-number {
+      display: flex;
+      align-items: center;
+
+      .v-icon {
+        font-size: 20px;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .border-top {
+    border-top: 0.2px solid #000000eb;
+  }
+
+  .border-bottom {
+    border-bottom: 0.2px solid #000000eb;
+  }
+
+  .points {
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .number-points {
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      .text-points {
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.profile-list-combos {
+  .profile-list-combo-items {
+
+    .expansion-amount-combo {
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+      margin: 1px 8px 0px 8px;
+      width: auto;
+      margin: 0px auto 24px auto;
+      max-width: 500px;
+      min-width: 290px;
+
+
+      .v-expansion-panel {
+        &:before {
+          display: none !important;
+        }
+
+        .v-expansion-panel-header {
+          padding: 0px;
+          min-height: 20px;
+
+          .v-expansion-panel-header__icon {
+            position: absolute;
+            left: 50%;
+            bottom:0;
+            transform: translate(-50%);
+            margin: 0;
+
+            i.v-icon {
+              color: $primary-color;
+            }
+          }
+        }
+
+        .v-expansion-panel-content__wrap {
+          padding: 8px 12px 12px 12px;
+          font-size: 14px;
+
+          .combo-history {
+            position: relative;
+
+            .combo-history-items {
+              padding: 0px 24px 12px 24px;
+              position: relative;
+
+              span.action-text {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-top: -8px;
+              }
+
+              &:before {
+                position: absolute;
+                content: '';
+                top: 8px;
+                bottom: -8px;
+                left: 8px;
+                width: 2px;
+                background-color: #ffe3cc;
+                //background-color: $primary-color;
+              }
+
+              &:after {
+                position: absolute;
+                content: '';
+                top: 4px;
+                left: 3px;
+                width: 12px;
+                height: 12px;
+                background-color: #ffe3cc;
+                //background-color: $primary-color;
+              }
+
+              &:last-child {
+                padding-bottom: 0;
+
+                &:before {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .amount-combo-box {
+      display: flex;
+      font-size: 14px;
+
+      .amount-combo-number.used {
+        color: $error-color;
+        font-weight: 600;
+      }
+
+      .amount-combo-number.left {
+        color: $primary-color;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.profile-cover {
+  background-color: $accent-color;
+}

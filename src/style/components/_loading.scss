@@ -1,0 +1,91 @@
+.box-loading-wrap{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box-loading{
+        text-align: center;
+        .logo-loading{
+            .text-logo-spa{
+                font-size: 100px;
+                line-height: 1;
+                position: relative;
+                margin-bottom: 44px;
+                color: $primary-color;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 60%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -10px;
+                    height: 2px;
+                    background-color: $primary-color;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -16px;
+                    background-color: #fff;
+                    border: 2px solid $primary-color;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .text-loading-animation{
+        .text-loading{
+            font-size: 22px;
+            line-height: 1;
+            color: $primary-color;;
+        }
+        .dots-loading-animation{
+            .dots-loading-1, .dots-loading-2, .dots-loading-3{
+                width: 5px;
+                height: 5px;
+                margin-left: 5px;
+                background-color: $primary-color;;
+                display: inline-block;
+                border-radius: 50%;
+                opacity: 0;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+            }
+            .dots-loading-1{
+                animation-name: test1;
+            }
+            .dots-loading-2{
+                animation-name: test2;
+            }
+            .dots-loading-3{
+                animation-name: test3;
+            }
+        }
+    }
+}
+@keyframes test1 {
+    0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    50%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes test2 {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes test3 {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    100% {opacity: 1;}
+}

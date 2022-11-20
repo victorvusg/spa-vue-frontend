@@ -1,0 +1,17 @@
+.success-overlay-wrap {
+    .v-card__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 8px;
+        p {
+            margin: 0;
+        }
+    }
+    .v-card__actions {
+        padding-top: 0;
+        align-items: center;
+        justify-content: center;
+    }
+}

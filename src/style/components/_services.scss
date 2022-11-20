@@ -1,0 +1,71 @@
+.services-list {
+    .service-tabs {
+        .v-tabs-bar {
+            height: unset !important;
+
+            .v-tab {
+                padding: 8px 10px!important;
+                font-size: 13px;
+            }
+
+            .v-tab--active {
+                background-color: $primary-color;
+                border-radius: 24px;
+                color: #ffff;
+            }
+        }
+    }
+
+    .service {
+        padding: 12px 12px 12px 12px;
+        margin-bottom: 16px;
+        border: 1px solid #dededed1;
+        border-radius: 15px;
+
+        .name-price {
+            .price {
+                text-align: right;
+            }
+        }
+
+        .service-detail-expansion {
+            .v-expansion-panel-header {
+                padding: 0px;
+
+                .button-group {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+
+                .v-expansion-panel-header__icon {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+.service-avatar {
+    border: 1px solid;
+    cursor: pointer;
+    &.checked {
+        background-color: $primary-color;
+    }
+}
+.service-name {
+    white-space: pre-wrap!important
+}
+.combo-sale {
+    background-color: $primary-color!important;
+    &.inactive {
+        background-color: #BDBDBD!important;
+        opacity: 0.6;
+    }
+}
+.service-list-by-category {
+    .service-name {
+        font-size: 15px!important;
+    }
+}

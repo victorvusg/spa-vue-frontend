@@ -1,0 +1,40 @@
+.combo-slide-card {
+    // background: linear-gradient(-45deg, #00a69c 0%, #00a36d 100%);
+    background-color: $primary-color!important;
+    padding: 20px 24px 24px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: none!important;
+    .v-card__text {
+        color: #ffffff!important;
+    }
+    .text-light {
+        color: #ffffffba!important;
+    }
+    &:before{
+        background: #ffffff;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        content: ' ';
+        display: block;
+        width: 10px;
+        height: 20px;
+        position: absolute;
+        transform: translate(0%, -50%);
+        top: 50%;
+        left: 0;
+    }
+    &:after{
+        background: #ffffff;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        content: ' ';
+        display: block;
+        width: 10px;
+        height: 20px;
+        position: absolute;
+        transform: translate(0%, -50%);
+        right: 0;
+        top: 50%;
+    }
+}

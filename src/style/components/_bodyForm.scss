@@ -1,0 +1,35 @@
+.body-form {
+    .blank-color {
+      fill: #c8e6c9;
+    }
+    .section {
+      pointer-events: fill;
+      &:hover {
+        cursor: pointer;
+        fill: pink !important;
+      }
+  
+      &.highlight {
+        fill: #f48fb1 !important;
+      }
+    }
+    .body-diagram {
+      text-align: center;
+      svg {
+        max-width: 150px;
+      }
+    }
+    .part-selector {
+      .v-messages {
+        display: none;
+      }
+      label {
+        font-size: 13px;
+      }
+    }
+    .st0 {
+      fill: #ffffff !important;
+    }
+  }
+
+  

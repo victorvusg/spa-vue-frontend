@@ -1,0 +1,72 @@
+
+  .facial-form {
+    .st0 {
+      display: none;
+    }
+    .st1 {
+      fill: #202020;
+    }
+    .st2 {
+      fill: #f9b9a5;
+    }
+    .st3 {
+      fill: #351811;
+    }
+    .st4 {
+      fill: #7f3d29;
+    }
+    .st5 {
+      fill: #ea7b59;
+    }
+    .st6 {
+      fill: none;
+      stroke: #ffffff;
+      stroke-miterlimit: 10;
+    }
+    g[data-name='forehead'] {
+      path {
+        fill: #9bcc98a3;
+      }
+    }
+    .forehead--text {
+      color: #719d6e;
+    }
+    g[data-name='nose'] {
+      path {
+        fill: #ff3434a3;
+      }
+    }
+    .nose--text {
+      color: #ff3434a3;
+    }
+    g[data-name='chin'] {
+      path {
+        fill: #ff6c959e;
+      }
+    }
+    .chin--text {
+      color: #ff6c959e;
+    }
+    g[data-name*='cheek'] {
+      path {
+        fill: #fffb84a6;
+      }
+    }
+    .cheek--text {
+      color: #beb749;
+    }
+    .facials-diagram {
+      text-align: center;
+      svg {
+        max-width: 150px;
+      }
+    }
+    .part-selector {
+      .v-messages {
+        display: none;
+      }
+      label {
+        font-size: 13px;
+      }
+    }
+  }
