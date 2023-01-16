@@ -140,18 +140,18 @@
         <i style="font-weight: bold">Tích luỹ đơn này được</i>
         <i>{{ intake.customer_earned_points | currencyFormat }}</i>
       </div>
+      <!-- TẠM TÍNH  -->
+      <div
+        style="
+          display: flex;
+          align-item: center;
+          justify-content: space-between;
+        "
+      >
+        <span style="font-weight: bold">Tạm tính</span>
+        <span>{{ preTotal | currencyFormat }}</span>
+      </div>
       <template v-if="additionalDiscountPrice">
-        <!-- TẠM TÍNH  -->
-        <div
-          style="
-            display: flex;
-            align-item: center;
-            justify-content: space-between;
-          "
-        >
-          <span style="font-weight: bold">Tạm tính</span>
-          <span>{{ preTotal | currencyFormat }}</span>
-        </div>
         <!-- GIẢM GIÁ  -->
         <div
           style="
@@ -174,6 +174,31 @@
           "
         >
           <strong>( Ghi chú: {{ additionalDiscountNote }} )</strong>
+        </div>
+      </template>
+      <!-- SỬ DỤNG ĐIỂM  -->
+      <template v-if="pointsUsedAmount">
+        <div
+          style="
+            display: flex;
+            align-item: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+          "
+        >
+          <i style="font-weight: bold">Giảm bằng điểm tích lũy</i>
+          <i>-{{ pointsUsedAmount | currencyFormat }}</i>
+        </div>
+        <!-- GHI CHÚ SỬ DỤNG ĐIỂM -->
+        <div
+          style="font-size: 10px"
+          v-for="(log, index) in pointLogs"
+          :key="index"
+        >
+          <i v-html="log.message" />
+          <i class="ml-1"
+            >(lúc {{ dateFormatted(log.created_at, 'kk:mm - DD/MM/YYYY') }})</i
+          >
         </div>
       </template>
       <!-- TỔNG CỘNG  -->
@@ -331,6 +356,23 @@ export default {
         discount_note: this.intake.additional_discount_price,
       };
       return receiptContent;
+    },
+    pointsUsedAmount() {
+      if (!this.intake.point_logs) return 0;
+      return this.intake.point_logs.reduce((sum, log) => {
+        const matches = log.message.match(/(?<=\{).+?(?=\})/g);
+        return sum + Number(matches[0]);
+      }, 0);
+    },
+    pointLogs() {
+      if (!this.intake.point_logs) return [];
+      return this.intake.point_logs.map((log) => ({
+        ...log,
+        message: log.message.replace(
+          /{([^"]+)}/g,
+          '<strong class="name">$1</strong>',
+        ),
+      }));
     },
   },
 };
