@@ -41,7 +41,6 @@
 </template>
 <script>
 import { getIntakeById } from '@/axios/intake';
-import { mapState } from 'vuex';
 import ViewLayout from '@/layout/ViewLayout.vue';
 import Receipt from '@/components/intake/intake-receipt/Receipt';
 import PaymentMethodsDialog from '@/components/intake/intake-receipt/PaymentMethodsDialog';

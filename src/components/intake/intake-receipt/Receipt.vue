@@ -360,8 +360,8 @@ export default {
     pointsUsedAmount() {
       if (!this.intake.point_logs) return 0;
       return this.intake.point_logs.reduce((sum, log) => {
-        const matches = log.message.match(/(?<=\{).+?(?=\})/g);
-        return sum + Number(matches[0]);
+        const matches = log.message.match(/\{(.*?)\}/);
+        return sum + Number(matches[1]);
       }, 0);
     },
     pointLogs() {
