@@ -358,7 +358,7 @@
                     <span class="error--text font-weight-bold"
                       >{{ variant.amount }} lượt</span
                     >
-                    x {{ variant.price | currencyFormat }}
+                    x {{ variant.sale_price | currencyFormat }}
                   </v-list-item-subtitle>
                   <v-list-item-subtitle>
                     <strong><i>Tặng</i></strong>
@@ -484,7 +484,7 @@
                     variant.name
                   }}</v-list-item-title>
                   <v-list-item-subtitle>
-                    {{ variant.price | currencyFormat() }}
+                    {{ variant.sale_price | currencyFormat() }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
                 <v-list-item-action>
@@ -615,7 +615,7 @@ export default {
     totalPrice() {
       return this.paidCombos.reduce((sum, currentVariant) => {
         // eslint-disable-next-line no-param-reassign
-        sum += currentVariant.price * currentVariant.amount;
+        sum += currentVariant.sale_price * currentVariant.amount;
         return sum;
       }, 0);
     },

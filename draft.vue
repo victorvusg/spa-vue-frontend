@@ -74,7 +74,7 @@
           </v-list-item-content>
           <v-list-item-action>
             <v-list-item-title class="service-name font-weight-bold">{{
-              variant.price | currencyFormat()
+              variant.sale_price | currencyFormat()
             }}</v-list-item-title>
           </v-list-item-action>
         </v-list-item>
@@ -197,10 +197,10 @@
           </v-list-item-content>
           <v-list-item-action>
             <v-list-item-title
-              v-if="variant.price"
+              v-if="variant.sale_price"
               class="service-name font-weight-bold"
             >
-              {{ variant.price | currencyFormat() }}
+              {{ variant.sale_price | currencyFormat() }}
             </v-list-item-title>
             <v-list-item-title v-else class="service-name font-weight-bold">
               Gói tặng

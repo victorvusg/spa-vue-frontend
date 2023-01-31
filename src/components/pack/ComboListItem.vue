@@ -9,11 +9,11 @@
           <span class="error--text font-weight-bold"
             >{{ variant.amount }} lượt</span
           >
-          x {{ variant.price | currencyFormat }}
+          x {{ variant.sale_price | currencyFormat }}
         </v-list-item-subtitle>
         <v-list-item-subtitle>
           <strong>{{
-            (variant.amount * variant.price) | currencyFormat
+            (variant.amount * variant.sale_price) | currencyFormat
           }}</strong>
         </v-list-item-subtitle>
       </template>

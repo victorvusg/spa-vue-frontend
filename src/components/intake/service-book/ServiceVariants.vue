@@ -69,7 +69,7 @@
         </v-list-item-content>
         <v-list-item-action>
           <v-list-item-title class="service-name font-weight-bold">
-            <div class="text-right">{{ variant.price | currencyFormat() }}</div>
+            <div class="text-right">{{ variant.sale_price | currencyFormat() }}</div>
           </v-list-item-title>
         </v-list-item-action>
       </v-list-item>

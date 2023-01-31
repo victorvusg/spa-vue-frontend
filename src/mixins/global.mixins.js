@@ -91,7 +91,7 @@ export default {
     checkBalance(intake, customerBalance) {
       const totalCredit = intake.orders.reduce((total, order) => {
         let price = 0;
-        const field = 'price';
+        const field = 'sale_price';
         if (order.type === 'promotion') {
           total += order[field];
         } else {

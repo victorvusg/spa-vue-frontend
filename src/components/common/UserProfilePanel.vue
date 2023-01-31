@@ -13,7 +13,7 @@
       <v-spacer></v-spacer>
       <slot name="action"></slot>
     </v-app-bar>
-    <v-row class="mx-0 profile-cover px-5 pb-2">
+    <v-row class="mx-0 profile-cover px-5 pb-2 my-0">
       <v-col cols="12" class="pa-0">
         <div class="display-1 primary--text">{{ user.name }}</div>
       </v-col>

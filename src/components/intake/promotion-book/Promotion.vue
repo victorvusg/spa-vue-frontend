@@ -19,7 +19,7 @@
             <template v-if="variant.is_free"> Gói tặng </template>
             <template v-else>
               <div class="text-right">
-                {{ variant.price | currencyFormat() }}
+                {{ variant.sale_price | currencyFormat() }}
               </div>
             </template>
           </v-list-item-title>

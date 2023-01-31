@@ -37,7 +37,7 @@
             >
               <template v-if="order.combo_id == null">
                 <span class="green--text">
-                  {{ (order.variant.price * order.amount) | currencyFormat }}
+                  {{ (order.variant.sale_price * order.amount) | currencyFormat }}
                 </span>
               </template>
               <template v-else>

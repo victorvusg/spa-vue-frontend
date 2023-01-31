@@ -114,9 +114,9 @@ export default {
   methods: {
     fromPrice(variants) {
       if (variants.length > 1) {
-        return Math.min(...variants.map((v) => v.price));
+        return Math.min(...variants.map((v) => v.sale_price));
       }
-      return variants[0].price;
+      return variants[0].sale_price;
     },
   },
 };

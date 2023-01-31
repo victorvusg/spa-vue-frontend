@@ -1,6 +1,8 @@
 <template>
   <div class="order-list-wrap">
-    <h3>Phiếu thanh toán</h3>
+    <v-row>
+      <v-col cols="12" class="py-0"> <h3>Phiếu thanh toán</h3> </v-col>
+    </v-row>
     <v-row>
       <v-col cols="4" class="py-0">Phụ trách</v-col>
       <v-col cols="8" class="py-0">{{ currentUser.name }}</v-col>
@@ -52,7 +54,7 @@ export default {
     totalPrice() {
       return this.orders.reduce((total, order) => {
         let price = 0;
-        const priceField = 'price';
+        const priceField = 'sale_price';
         if (order.type === 'promotion') {
           total += order[priceField];
         } else {
